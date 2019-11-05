@@ -39,12 +39,13 @@ public class School_CSA {
 	
 	public String toString()
 	{	
-		String result = "";
+		String result = "Alpharetta High School Roster";
 		
 		for (int i = 0; i < studentList.size(); i++)
 		{
-			result += "\n\nNo. " + (i+1) + " Alpharetta High School Student ------------------------\n"; // 24 dashes
+			result += "\nNo. " + (i+1) + " Alpharetta High School Student ------------------------\n"; // 24 dashes
 			result += (studentList.get(i));
+			result += "\n---";
 		}
 		
 		return result;
