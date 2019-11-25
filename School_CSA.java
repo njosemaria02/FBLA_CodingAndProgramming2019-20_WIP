@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class School_CSA {
@@ -6,6 +9,15 @@ public class School_CSA {
 	public School_CSA()
 	{
 		studentList = new ArrayList<Student>();
+	}
+	
+	public School_CSA(ArrayList temp)
+	{
+		studentList = new ArrayList<Student>();
+
+		for (int len = 0; len < temp.size(); len++)
+			addStudent((Student) temp.get(len));
+		
 	}
 	
 	public void addStudent(String firstName, String lastName, String ID, String grade, String totalServiceHours)
@@ -22,6 +34,12 @@ public class School_CSA {
 		studentList.add(student);
 	}
 	
+	public boolean removeStudent(int index)
+	{
+		Student temp = studentList.get(index);
+		return (studentList.remove(index) == temp);
+	}
+	
 	public int getArrayLength()
 	{
 		return studentList.size();
@@ -35,6 +53,20 @@ public class School_CSA {
 	public Student getSpecificStudent(int index)
 	{
 		return studentList.get(index);
+	}
+	
+	public void updateDatabase(String fn)
+	{
+		try 
+		{ 
+			BufferedWriter out = new BufferedWriter(new FileWriter(fn)); 
+				out.write(toString()); 
+				out.close(); 
+		} 
+		catch (IOException e1) 
+		{ 
+			System.out.println("Exception Occurred" + e1); 
+		} 
 	}
 	
 	public String toString()
