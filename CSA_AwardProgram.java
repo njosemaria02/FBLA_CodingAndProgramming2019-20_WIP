@@ -165,7 +165,6 @@ public class CSA_AwardProgram {
 		  alpharetta = new School_CSA(students);
 		  
 		  System.out.println("Alpharetta roster array successfully built");
-			
 	}
 	
 	public static void buildWelcomeGUI()
@@ -487,6 +486,7 @@ public class CSA_AwardProgram {
 	     		}
 	     		
 	     		buildMainPageGUI();
+
 	     		popup.dispose();
      		}; 
      		} );
