@@ -1,12 +1,89 @@
-
-
+Alpharetta High School Roster
 No. 1 Alpharetta High School Student ------------------------
-Full Name: nathaly jose-maria
-First Name: nathaly
-Last Name: jose-maria
-Student Id: 1102099029
-Grade Level: 434
-Total Service Hours: 243434.0
+Full Name: alan mcvay
+First Name: alan
+Last Name: mcvay
+Student Id: 1100377207
+Grade Level: 11
+Total Service Hours: 1111.0
 Community Award Eligibility (50+ hours): true
 Service Award Eligibility (200+ Hours): true
 Achieve Award Eligibility (500+ Hours): true
+---
+No. 2 Alpharetta High School Student ------------------------
+Full Name: Nathaly Jose-Maria
+First Name: Nathaly
+Last Name: Jose-Maria
+Student Id: 1100299029
+Grade Level: 12
+Total Service Hours: 200.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): true
+Achieve Award Eligibility (500+ Hours): false
+---
+No. 3 Alpharetta High School Student ------------------------
+Full Name: Emily Jose-Maria
+First Name: Emily
+Last Name: Jose-Maria
+Student Id: 1100288028
+Grade Level: 9
+Total Service Hours: 150.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): false
+Achieve Award Eligibility (500+ Hours): false
+---
+No. 4 Alpharetta High School Student ------------------------
+Full Name: natalie antunez
+First Name: natalie
+Last Name: antunez
+Student Id: 1100277027
+Grade Level: 12
+Total Service Hours: 300.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): true
+Achieve Award Eligibility (500+ Hours): false
+---
+No. 5 Alpharetta High School Student ------------------------
+Full Name: Taylor massey
+First Name: Taylor
+Last Name: massey
+Student Id: 1100700287
+Grade Level: 9
+Total Service Hours: 3.0
+Community Award Eligibility (50+ hours): false
+Service Award Eligibility (200+ Hours): false
+Achieve Award Eligibility (500+ Hours): false
+---
+No. 6 Alpharetta High School Student ------------------------
+Full Name: raphael jose-maria
+First Name: raphael
+Last Name: jose-maria
+Student Id: 1100266026
+Grade Level: 10
+Total Service Hours: 450.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): true
+Achieve Award Eligibility (500+ Hours): false
+---
+No. 7 Alpharetta High School Student ------------------------
+Full Name: lorana jose-maria
+First Name: lorana
+Last Name: jose-maria
+Student Id: 1100422042
+Grade Level: 12
+Total Service Hours: 900.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): true
+Achieve Award Eligibility (500+ Hours): true
+---
+No. 8 Alpharetta High School Student ------------------------
+Full Name: thomas hatcher
+First Name: thomas
+Last Name: hatcher
+Student Id: 1100900879
+Grade Level: 12
+Total Service Hours: 300.0
+Community Award Eligibility (50+ hours): true
+Service Award Eligibility (200+ Hours): true
+Achieve Award Eligibility (500+ Hours): false
+---
