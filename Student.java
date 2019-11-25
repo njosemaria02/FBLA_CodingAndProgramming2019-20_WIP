@@ -73,35 +73,35 @@ public class Student {
 	// mutator methods ***************************************
 
 	public void setMyFirstName(String newFirstName) {
-		this.myFirstName = newFirstName;
+		myFirstName = newFirstName;
 	}
 
 	public void setMyLastName(String newLastName) {
-		this.myLastName = newLastName;
+		myLastName = newLastName;
 	}
 
 	public void setMyStudentId(int newStudentId) {
-		this.myStudentId = newStudentId;
+		myStudentId = newStudentId;
 	}
 	
 	public void setMyGradeLevel(int newGradeLevel) {
-		this.myGradeLevel = newGradeLevel;
+		myGradeLevel = newGradeLevel;
 	}
 
 	public void setMyTotalServiceHours(double newTotalServiceHours) {
-		this.myTotalServiceHours = newTotalServiceHours;
+		myTotalServiceHours = newTotalServiceHours;
 	}
 
 	public void setCommunityEligibility(boolean newCommunityEligibility) {
-		this.communityEligibility = newCommunityEligibility;
+		communityEligibility = newCommunityEligibility;
 	}
 
 	public void setServiceEligibility(boolean newServiceEligibility) {
-		this.serviceEligibility = newServiceEligibility;
+		serviceEligibility = newServiceEligibility;
 	}
 
 	public void setAchieveEligibility(boolean newAchieveEligibility) {
-		this.achieveEligibility = newAchieveEligibility;
+		achieveEligibility = newAchieveEligibility;
 	}
 	
 	// toString ----------------------------------------------------------------

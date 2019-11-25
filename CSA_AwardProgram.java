@@ -9,6 +9,7 @@ import javax.swing.text.BadLocationException;
 import java.io.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class CSA_AwardProgram {
@@ -22,10 +23,9 @@ public class CSA_AwardProgram {
 	}
 	
 	private static void createSchoolRoster()
-	{
+	{	int count = 0;
 		//need to recreate array each time program opens since will not remember from last use
-		 int count = 0;
-		 Student students[];
+		 ArrayList<Student> students = new ArrayList<Student>();
 		 
 		  try
 		  {
@@ -39,40 +39,71 @@ public class CSA_AwardProgram {
 			      int startIndex = strLine.indexOf(stringToLookFor);
 			      while (startIndex != -1) {
 			        count++;
+			        students.add(new Student());
 			        startIndex = fileName.indexOf(stringToLookFor, startIndex + stringToLookFor.length());
 			      }
 			}
 		    
-		    students = new Student[count];
+		    System.out.println(count); // successfully finding number of students
 		    
-		    for (int i = 0; i < 5; i++)
-		    {
-		    	String strLine2;
-		    	if (i == 0)
-		    		stringToLookFor = "First Name: ";
-		    	else if (i == 1)
-		    		stringToLookFor = "Last Name: ";
-		    	else if (i == 2)
-		    		stringToLookFor = "Student Id: ";
-		    	else if (i == 3)
-		    		stringToLookFor = "Grade Level: ";
-		    	else
-		    		stringToLookFor = "Total Service Hours: ";
-		    		
-		    	
-		    	while ((strLine2 = br.readLine()) != null)   {
-				      int startIndex = strLine2.indexOf(stringToLookFor);
-				      int lastIndex = strLine2.indexOf("Last Name: ");
-				      while (startIndex != -1) {
-				        startIndex = lastIndex - (startIndex + 12);
-				        //look over here!!!
-				        fileName.substring(startIndex, lastIndex);
-				        startIndex = fileName.indexOf(stringToLookFor, startIndex + stringToLookFor.length());
-				      }
-		    	}
+		    String endString = "";
+
+			for (int i = 0; i < 5; i++) // searching by column
+			{
+				for (int numStu = 0; numStu < count; numStu++)
+				{
+			    	Student tempStudent = students.get(numStu);
+			    	
+			    	String strLine2;
+			    	if (i == 0)
+			    	{
+			    		stringToLookFor = "First Name: ";
+			    		endString = "Last Name: ";
+			    	}
+			    	else if (i == 1)
+			    	{
+			    		stringToLookFor = "Last Name: ";
+			    		endString = "Student Id: ";
+			    	}
+			    	else if (i == 2)
+			    	{
+			    		stringToLookFor = "Student Id: ";
+			    		endString = "Grade Level: ";
+			    	}
+			    	else if (i == 3)
+			    	{
+			    		stringToLookFor = "Grade Level: ";
+			    		endString = "Total Service Hours: ";
+			    	}
+			    	else
+			    	{
+			    		stringToLookFor = "Total Service Hours: ";
+			    		endString = "---";
+			    	}
+			    		
+			    	String temp = "";
+			    	
+			    	while ((strLine2 = br.readLine()) != null)   {
+					      int startIndex = strLine2.indexOf(stringToLookFor);
+					      while (startIndex != -1) {
+					        temp = fileName.substring(startIndex);
+					        startIndex = fileName.indexOf(stringToLookFor, startIndex + stringToLookFor.length());
+					        
+					        if (i == 0)
+					    		tempStudent.setMyFirstName(temp);
+					    	else if (i == 1)
+					    		tempStudent.setMyLastName(temp);
+					    	else if (i == 2)
+					    		tempStudent.setMyStudentId(Integer.parseInt(temp));
+					    	else if (i == 3)
+					    		tempStudent.setMyGradeLevel(Integer.parseInt(temp));
+					    	else
+					    		tempStudent.setMyTotalServiceHours(Integer.parseInt(temp));
+					      }
+			    	}
+			    }
 		    }
 			    
-		    
 		    in.close();
 		  }
 		  catch (Exception e)
@@ -88,7 +119,10 @@ public class CSA_AwardProgram {
 //			  alpharetta.addStudent(tempStu);
 //		  }
 		  
-		  System.out.println(count);
+		  for (int j = 0; j < students.size(); j++)
+			  alpharetta.addStudent(students.get(j));
+		  
+		  System.out.println(alpharetta.toString());
 	}
 	
 	public static void buildWelcomeGUI()
@@ -338,21 +372,12 @@ public class CSA_AwardProgram {
 	     			String myGrade = gradeField.getText();
 	     			String myHours = hoursField.getText();
 	     			
-	     			
-//	     			fw.append("---\n");
 	     			alpharetta.addStudent(myFirst, myLast, myID, myGrade, myHours);
-//	     			fw.append(alpharetta.getRecentStudent().toString());
-//	     			fw.append("\n");
-	     			
-	     			//fw.print("/// TEST ///");
 	     			
 	     			PrintWriter writer = new PrintWriter(fileName);
-	     			writer.print("");
+	     			writer.print(alpharetta.toString());
 	     			writer.close();
-	     			
-	     			fw.append(alpharetta.toString());
-	     			
-	     			
+
 	     		}
 	     		catch (IOException e1)
 	     		{ 
@@ -361,8 +386,9 @@ public class CSA_AwardProgram {
 
 	     		if (!mainActive)
 	         		CSA_AwardProgram.buildMainPageGUI();
-     			popup.dispose();
      			
+	     		
+	     		popup.dispose();
      		}; 
      		} ); // end of entire statement
      			
